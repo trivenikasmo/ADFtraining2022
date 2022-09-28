@@ -1,5 +1,5 @@
 {
-	"name": "cars_input",
+	"name": "input_cars",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_BLOB_Training229",
