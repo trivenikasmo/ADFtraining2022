@@ -9,7 +9,7 @@
 						"referenceName": "Movies_DS1",
 						"type": "DatasetReference"
 					},
-					"name": "MoviesClean"
+					"name": "Movies"
 				}
 			],
 			"sinks": [],
@@ -26,8 +26,8 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> MoviesClean",
-				"MoviesClean derive(titleNew = ERROR_FUNCTION('toString(left(title,length(title)-6)))')) ~> derivedColumn1"
+				"     ignoreNoFilesFound: false) ~> Movies",
+				"Movies derive(titleNew = ERROR_FUNCTION('toString(left(title,length(title)-6)))')) ~> derivedColumn1"
 			]
 		}
 	}
