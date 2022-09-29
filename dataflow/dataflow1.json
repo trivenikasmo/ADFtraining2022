@@ -13,7 +13,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "derivedColumn1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          movieId as string,",
@@ -22,7 +26,8 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> MoviesClean"
+				"     ignoreNoFilesFound: false) ~> MoviesClean",
+				"MoviesClean derive(titleNew = ERROR_FUNCTION('toString(left(title,length(title)-6)))')) ~> derivedColumn1"
 			]
 		}
 	}
