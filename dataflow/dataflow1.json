@@ -15,7 +15,7 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "derivedColumn1"
+					"name": "MoviesClean"
 				}
 			],
 			"scriptLines": [
@@ -27,7 +27,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Movies",
-				"Movies derive(titleNew = ERROR_FUNCTION('toString(left(title,length(title)-6)))')) ~> derivedColumn1"
+				"Movies derive(titleNew = ERROR_FUNCTION('toString(left(title,length(title)-6)))')) ~> MoviesClean"
 			]
 		}
 	}
