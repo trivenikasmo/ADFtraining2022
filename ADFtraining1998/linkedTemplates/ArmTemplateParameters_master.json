@@ -11,6 +11,9 @@
 		"LS_SQL_EDW_connectionString": {
 			"value": ""
 		},
+		"Movies_DS1_connectionString": {
+			"value": ""
+		},
 		"containerUri": {
 			"value": ""
 		},
