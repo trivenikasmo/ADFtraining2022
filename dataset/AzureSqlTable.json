@@ -17,8 +17,8 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "@dataset().SchemaName",
-			"table": "@dataset().table_name"
+			"schema": "dbo",
+			"table": "Cars"
 		}
 	}
 }
